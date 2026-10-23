@@ -17,6 +17,10 @@
                 <p>All fields are required unless stated as optional.</p>
                 <p><strong>Privacy:</strong> We only use your information for plot requests. Nothing is collected or stored.</p>
             </section>
+            <section id="requirements">
+                <h2>F4 · Requirements and Validation</h2>
+                <p>Your name can only be up to 80 characters, an email must include an @, and the ZIP code must be 5 digits, Gardeners must range from 1-6, and the details box can only be 500 characters.</p>
+            </section>
             <form method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
@@ -24,24 +28,24 @@
                     <div class="field">
                         <label for="name">Full name</label>
                         <p class="help" id="name-help">80 character max.</p>
-                        <input id="name" name="name" type="text" autocomplete="name" required maxlength="80">
+                        <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" aria-describedby="name-help">
                     </div>
                     <div class="paired-fields">
                         <div class="field">
                             <label for="email">Email address</label>
                             <p class="help" id="email-help">Example: name@example.com</p>
-                            <input id="email" name="email" type="email" autocomplete="email" required>
+                            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help">
                         </div>
                         <div class="field">
                             <label for="phone">Phone number (optional)</label>
                             <p class="help" id="phone-help">Example: 480-123-3456</p>
-                            <input id="phone" name="phone" type="tel" autocomplete="tel">
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-help">
                         </div>
                     </div>
                     <div class="field">
                         <label for="zip">ZIP code</label>
                         <p class="help" id="zip-help">5 digits. Example: 34677</p>
-                        <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{5}">
+                        <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{5}" aria-describedby="zip-help">
                     </div>
                 </fieldset>
                 <fieldset>
@@ -63,7 +67,7 @@
                         <div class="field">
                             <label for="gardeners">Number of gardeners</label>
                             <p class="help" id="gardeners-help">Select 1 through 6.</p>
-                            <input id="gardeners" name="gardeners" type="number" min="1" max="6" step="1" required>
+                            <input id="gardeners" name="gardeners" type="number" min="1" max="6" step="1" required aria-describedby="gardeners-help">
                         </div>
                         <label class="choice"><input type="checkbox" name="accessible_bed" value="yes">waist-high accessible bed (optional)</label>
                     </fieldset>
