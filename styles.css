@@ -148,8 +148,8 @@ button{
     border-radius:.25rem;
     font-weight:700;
 }
-:focus-visible{
-    outline:.2rem solid var(--color-accent);
+:focus-visible,.state-focus input{
+    outline:.2rem solid var(--color-focus);
     outline-offset:.2rem;
 }
 .error-summary,.field-error{
@@ -157,8 +157,25 @@ button{
     border-left:.4rem solid var(--color-error);
     background:#fff1f0;
 }
-.field-error input{
+.field-error input,input[aria-invalid="true"],input:user-invalid,select:user-invalid,textarea:user-invalid{
     border-color:var(--color-error);
+    border-style:dashed;
+}
+.field-valid{
+    padding:1rem;
+    border-left:.4rem solid var(--color-valid);
+    background:#eef7f0;
+}
+.field-valid input{
+    border-color:var(--color-valid);
+}
+.field-valid p{
+    color:var(--color-valid);
+}
+input:disabled{
+    background:var(--gray-100);
+    border-style:dotted;
+    cursor:not-allowed;
 }
 button:disabled{
     opacity:.55;

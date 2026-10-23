@@ -81,17 +81,43 @@
                 </form>
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
-                    <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
+                    <p>This is not apart of the form.</p>
+                    <div class="field">
+                        <label for="state-default">Default (optional)</label>
+                        <input id="state-default" type="text">
+                    </div>
+                    <div class="field state-focus">
+                        <label for="state-focus">Focus (shown with a dark outline)</label>
+                        <input id="state-focus" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="state-required">Required (no "optional" in the label)</label>
+                        <input id="state-required" type="text" required>
+                    </div>
+                    <div class="field field-valid">
+                        <label for="state-valid">Valid</label>
+                        <input id="state-valid" type="email" value="example@example.com" aria-describedby="state-valid-message">
+                        <p id="state-valid-message"><strong>Looks good.</strong></p>
+                    </div>
+                    <div class="field">
+                        <label for="state-disabled">Disabled</label>
+                        <input id="state-disabled" type="text" value="Not editable" disabled>
+                    </div>
+                    <div class="field">
+                        <label for="state-invalid">Invalid</label>
+                        <input id="state-invalid" type="email" value="example" aria-invalid="true" aria-describedby="state-invalid-message">
+                        <p id="state-invalid-message"><strong>Error:</strong> Enter an email address that includes an @, like name@example.com.</p>
+                    </div>
                     <div class="error-summary">
-                        <h3>There is a problem with the fictional submission</h3>
-                        <p><a href="#error-example">Email address needs attention</a></p>
+                        <h3>There is a problem with your plot request</h3>
+                        <p><a href="#error-example">ZIP code needs attention</a></p>
                     </div>
                     <div class="field field-error">
-                        <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                        <label for="error-example">ZIP code</label>
+                        <input id="error-example" type="text" value="852A1" aria-invalid="true" aria-describedby="error-message">
+                        <p id="error-message"><strong>Error:</strong> ZIP code can not contain letters, and must be 5 letters, like 85201. please fix your entry.</p>
                     </div>
-                    <button type="button" disabled>Disabled example</button>
+                    <button type="button" disabled>Send plot request (disabled)</button>
                 </section>
                 <section id="documentation">
                     <h2>F2 and F6 · Planning and Evidence</h2>
