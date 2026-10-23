@@ -30,7 +30,7 @@
         </head>
         <body>
             <h1>F2 · Task and Data Plan</h1>
-            <p>Duplicate rows as needed. Justify every collected value.</p>
+            <p>Task: Mesa Community Garden plot reservation inquiry (fictional). One row per control in index.html.</p>
             <table>
                 <thead>
                     <tr>
@@ -46,14 +46,104 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>Full name</td>
+                        <td>Staff needs a way to address the person for the plot</td>
+                        <td>Yes</td>
+                        <td>input type="text"</td>
+                        <td>name</td>
+                        <td>name</td>
+                        <td>Up to 80 characters, inside the help text, any format is accepted.</td>
+                        <td>a single field instead of first/last so that all name formats work. this is a perosnal identifier.</td>
+                    </tr>
+                    <tr>
+                        <td>Email address</td>
+                        <td>Staff needs to be able to contact the person for the plot .</td>
+                        <td>Yes</td>
+                        <td>input type="email"</td>
+                        <td>email</td>
+                        <td>email</td>
+                        <td>It needs to look like name@exmaple.com. this example will be shown before entry.</td>
+                        <td>Personal contact. It will be used for nothing except replying to the request from the person.</td>
+                    </tr>
+                    <tr>
+                        <td>Phone number (optional)</td>
+                        <td>If they dont like the email they can instead use the phone number as a backup contact.</td>
+                        <td>No</td>
+                        <td>input type="tel"</td>
+                        <td>phone</td>
+                        <td>tel</td>
+                        <td>Example 480-234-6589 shown. There is no pattern so any phone format can work.</td>
+                        <td>Personal contact. This is optional.</td>
+                    </tr>
+                    <tr>
+                        <td>ZIP code</td>
+                        <td>Confirms the person is a resident of Mesa.</td>
+                        <td>Yes</td>
+                        <td>input type="text"</td>
+                        <td>zip</td>
+                        <td>postal-code / inputmode="numeric"</td>
+                        <td>Exactly 5 digits like 23463.</td>
+                        <td>It will only require the zip, so no street address collected.</td>
+                    </tr>
+                    <tr>
+                        <td>Plot size</td>
+                        <td>Staff assign plots by size.</td>
+                        <td>Yes</td>
+                        <td>input type="radio" (group with legend)</td>
+                        <td>plot_size = small / standard</td>
+                        <td>N/A</td>
+                        <td>Choose one.</td>
+                        <td>Not sensitive.</td>
+                    </tr>
+                    <tr>
+                        <td>Garden location</td>
+                        <td>So that staff can check the availiabiltiy of a chosen site.</td>
+                        <td>Yes</td>
+                        <td>select</td>
+                        <td>There will be 3 locations, west-mesa, downtown-mesa, east-mesa</td>
+                        <td>N/A</td>
+                        <td>Must choose a location.</td>
+                        <td>Not sensitive.</td>
+                    </tr>
+                    <tr>
+                        <td>Number of household gardeners</td>
+                        <td>Larger A household might need to have a standard plot.</td>
+                        <td>Yes</td>
+                        <td>input type="number"</td>
+                        <td>gardeners</td>
+                        <td>N/A</td>
+                        <td>Whole number 1 through 6.</td>
+                        <td>Count only, no names required.</td>
+                    </tr>
+                    <tr>
+                        <td>waist-high accessible bed (optional)</td>
+                        <td>Some people may need this for accessibility concerns.</td>
+                        <td>No</td>
+                        <td>input type="checkbox"</td>
+                        <td>accessible_bed = yes</td>
+                        <td>N/A</td>
+                        <td>None.</td>
+                        <td>it will be optional, could reveal health condition.</td>
+                    </tr>
+                    <tr>
+                        <td>Anything else we should know? (optional)</td>
+                        <td>In case there is important information needed</td>
+                        <td>No</td>
+                        <td>textarea</td>
+                        <td>details</td>
+                        <td>N/A</td>
+                        <td>500 characters max.</td>
+                        <td>Could include personal details if the person wanted too.</td>
+                    </tr>
+                    <tr>
+                        <td>Guidelines agreement</td>
+                        <td>To hold a plot the person needs to accept the guidelines.</td>
+                        <td>Yes</td>
+                        <td>input type="checkbox"</td>
+                        <td>guidelines = agreed</td>
+                        <td>N/A</td>
+                        <td>Must be checked to submit.</td>
+                        <td>Not sensitive.</td>
                     </tr>
                 </tbody>
             </table>
