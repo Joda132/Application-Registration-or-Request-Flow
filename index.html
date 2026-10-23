@@ -45,18 +45,35 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
-                    <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B</label>
+                    <legend>F3 · Plot choices</legend>
+                    <fieldset>
+                        <legend>Plot size</legend>
+                        <label class="choice"><input type="radio" name="plot_size" value="small" required> Raised bed (4 x 8 ft)</label>
+                        <label class="choice"><input type="radio" name="plot_size" value="standard"> In ground plot (10 x 10 ft)</label>
+                    </fieldset>
+                        <div class="field">
+                            <label for="location">Garden location</label>
+                            <select id="location" name="location" required>
+                                <option value="">Select a location</option>
+                                <option value="west-mesa">West Mesa garden</option>
+                                <option value="downtown-mesa">Downtown Mesa garden</option>
+                                <option value="east-mesa">East Mesa garden</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="gardeners">Number of gardeners</label>
+                            <p class="help" id="gardeners-help">Select 1 through 6.</p>
+                            <input id="gardeners" name="gardeners" type="number" min="1" max="6" step="1" required>
+                        </div>
+                        <label class="choice"><input type="checkbox" name="accessible_bed" value="yes">waist-high accessible bed (optional)</label>
                     </fieldset>
                     <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Explain the expected content and any limit before entry.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
+                        <label for="details">Anything else we should know? (optional)</label>
+                        <p class="help" id="details-help">For example, gardening experience or preferred month. Up to 500 characters.</p>
+                        <textarea id="details" name="details" maxlength="500" aria-describedby="details-help"></textarea>
                     </div>
-                    <button type="submit">Replace with a specific action</button>
+                    <label class="choice"><input type="checkbox" name="guidelines" value="agreed" required> I agree to follow the garden guidelines.</label>
+                    <button type="submit">Send plot request</button>
                 </form>
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
