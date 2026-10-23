@@ -17,17 +17,31 @@
                 <p>All fields are required unless stated as optional.</p>
                 <p><strong>Privacy:</strong> We only use your information for plot requests. Nothing is collected or stored.</p>
             </section>
-            <form action="" method="get">
+            <form method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
-                    <p class="help">Replace or extend this group based on your justified field inventory.</p>
+                    <p class="help">For responding back to your request.</p>
                     <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name">
+                        <label for="name">Full name</label>
+                        <p class="help" id="name-help">80 character max.</p>
+                        <input id="name" name="name" type="text" autocomplete="name" required maxlength="80">
+                    </div>
+                    <div class="paired-fields">
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <p class="help" id="email-help">Example: name@example.com</p>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone number (optional)</label>
+                            <p class="help" id="phone-help">Example: 480-123-3456</p>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel">
+                        </div>
                     </div>
                     <div class="field">
-                        <label for="email">Email address (required)</label>
-                        <input id="email" name="email" type="email" autocomplete="email" required>
+                        <label for="zip">ZIP code</label>
+                        <p class="help" id="zip-help">5 digits. Example: 34677</p>
+                        <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{5}">
                     </div>
                 </fieldset>
                 <fieldset>
